@@ -24,19 +24,21 @@ body {
   height: 0;
   overflow: hidden;
 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
   transition: all 0.5s;
 }
 
 .accordion-label {
   display: block;
-  padding: 20px 30px;
+  font-weight: 500;
+  font-size: 2rem;
+  padding: 1.2rem 2.4rem;
 
   background-color: #d8d05f;
   color: #555;
-  font-weight: 300;
+
   cursor: pointer;
-  font-size: 30px;
+
   font-family: Verdana, sans-serif;
   transition: all 0.5s;
 }
@@ -84,4 +86,52 @@ body {
 
 .accodrion-input:checked + .accordion-label + .accordion-body {
   height: auto;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1920px) {
+  .accordion-container {
+    width: 50vw;
+  }
+
+  .accordion-label {
+    font-weight: 500;
+    font-size: 2rem;
+    padding: 1.2rem 2.4rem;
+  }
+  .accordion-image {
+    scale: 100%;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .accordion-container {
+    width: 80vw;
+    gap: 0.4rem;
+  }
+
+  .accordion-label {
+    font-weight: 400;
+    font-size: 1.4rem;
+    padding: 0.6rem 1.2rem;
+  }
+  .accordion-image {
+    scale: 50%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .accordion-container {
+    width: 95vw;
+    gap: 1px;
+  }
+
+  .accordion-label {
+    font-weight: 300;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.3rem;
+  }
+  .accordion-image {
+    scale: 25%;
+  }
 }
