@@ -23,7 +23,6 @@ body {
   justify-content: center;
   height: 0;
   overflow: hidden;
-  transition: all 0.5s;
 }
 
 .accordion-label {
@@ -74,6 +73,7 @@ body {
 
 .accodrion-input:checked + .accordion-label .accordion-body {
   height: auto;
+  transition: all 0.5s ease;
 }
 
 .accodrion-input:checked
@@ -104,6 +104,8 @@ body {
   .accordion-image {
     width: 5rem;
     height: 5rem;
+    transform: scale(0);
+    transition: all 0.5s ease;
   }
 }
 
@@ -125,6 +127,8 @@ body {
   .accordion-image {
     width: 10rem;
     height: 10rem;
+    transform: scale(0);
+    transition: all 0.5s ease;
   }
 }
 
@@ -141,8 +145,17 @@ body {
   }
 
   .accodrion-input:hover + .accordion-label .accordion-label__content__icon {
-    transition: transform 0.5s ease;
+    transition: all 0.5s ease;
     transform: rotate(495deg);
+  }
+
+  .accordion-container .accordion-label__content__icon {
+    transform: scale(0);
+    transition: all 0.5s ease;
+  }
+
+  .accordion-container:hover .accordion-label__content__icon {
+    transform: scale(1);
   }
 
   .accodrion-input:hover + .accordion-label .accordion-body .accordion-image {
@@ -163,8 +176,10 @@ body {
   }
 
   .accordion-image {
+    width: 20rem;
+    height: 20rem;
     transform: scale(0);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
   }
 
   .accordion-image:hover {
@@ -183,9 +198,5 @@ body {
     font-weight: 500;
     font-size: 2rem;
     padding: 1rem 2rem;
-  }
-  .accordion-image {
-    width: 20rem;
-    height: 20rem;
   }
 }
